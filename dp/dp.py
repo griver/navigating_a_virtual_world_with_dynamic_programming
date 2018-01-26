@@ -119,7 +119,7 @@ def policy_iteration(environment, discount_factor=1.0, max_iter=1e9):
 
             # If action didn't change
             if current_action != best_action:
-                stable_policy = True
+                stable_policy = False
 
             # Greedy policy update
             policy[state] = np.eye(environment.nA)[best_action]
